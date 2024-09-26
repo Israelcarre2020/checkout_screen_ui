@@ -47,23 +47,6 @@ class CheckoutPageFooter extends StatelessWidget {
           height: 60,
         ),
         if (displayNote)
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextButton(
-                onPressed: () async {
-                  if (noteLink != null) {
-                    final uri = Uri(path: noteLink!);
-                    await canLaunchUrl(uri)
-                        ? await launchUrl(uri)
-                        : throw 'Could not launch $noteLink';
-                  }
-                },
-                child: Text(noteText),
-              )
-            ],
-          ),
-        if (displayNote)
           const SizedBox(
             height: 10,
           ),
@@ -77,19 +60,11 @@ class CheckoutPageFooter extends StatelessWidget {
                     ? await launchUrl(uri)
                     : throw 'Could not launch $termsLink';
               },
-              child: const Text('Terms'),
+              child: const Text('Terminos y condiciones'),
             ),
             const SizedBox(
               width: 10,
             ),
-            TextButton(
-                onPressed: () async {
-                  final uri = Uri(path: privacyLink);
-                  await canLaunchUrl(uri)
-                      ? await launchUrl(uri)
-                      : throw 'Could not launch $privacyLink';
-                },
-                child: const Text('Privacy')),
           ],
         ),
         const SizedBox(

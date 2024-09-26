@@ -1,3 +1,4 @@
+import 'package:checkout_screen_ui/ui_components/app_colors.dart';
 import 'package:flutter/material.dart';
 
 /// Status of the pay button based ont he transaction in progress.
@@ -54,7 +55,7 @@ class CardPayButtonState extends State<CardPayButton> {
       : (shouldBeRed ? Colors.red : Colors.green);
 
   Widget get displayedWidget {
-    Widget w = Text(widget.text,
+    Widget w = Text('Pagar',
         style: TextStyle(color: Colors.grey.shade200, fontSize: 20.0));
 
     switch (status) {
@@ -92,7 +93,7 @@ class CardPayButtonState extends State<CardPayButton> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: color,
+        backgroundColor: AppColors.mainBlue,
         minimumSize: const Size(double.infinity, 50),
       ),
       onPressed: (status == CardPayButtonStatus.ready)

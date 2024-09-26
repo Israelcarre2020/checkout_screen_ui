@@ -68,13 +68,13 @@ class _ChargeAmountDisplayState extends State<_ChargeAmountDisplay> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('Charge Amount '),
+          const Text('Precio total'),
           Text(
             '\$${widget._viewModel.data.totalPrice}',
             style: const TextStyle(
                 color: Colors.green, fontSize: 24, fontWeight: FontWeight.bold),
           ),
-          Text(isOpen ? 'Hide Details' : 'View Details',
+          Text(isOpen ? 'OCultar detalle' : 'Ver detalles',
               style: const TextStyle(fontSize: 12)),
         ],
       ),

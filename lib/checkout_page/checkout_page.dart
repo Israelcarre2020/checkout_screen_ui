@@ -244,7 +244,7 @@ class CheckoutPage extends StatelessWidget {
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: _padding),
-                            child: Text('Or pay with Card'),
+                            child: Text('O paga con tarjeta'),
                           ),
                           Expanded(
                             child: Divider(

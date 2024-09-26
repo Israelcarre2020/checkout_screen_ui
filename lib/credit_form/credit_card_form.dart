@@ -156,7 +156,7 @@ class _CreditCardFormState extends State<CreditCardForm> {
                 decoration: const InputDecoration(
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-                    prefixIcon: Text("Email"),
+                    prefixIcon: Text("Correo"),
                     prefixIconConstraints:
                         BoxConstraints(minWidth: 0, minHeight: 0),
                     border: InputBorder.none),
@@ -170,7 +170,7 @@ class _CreditCardFormState extends State<CreditCardForm> {
             children: [
               Padding(
                 padding: EdgeInsets.fromLTRB(4, 16, 0, 4),
-                child: Text('Card Information'),
+                child: Text('Información de tarjeta'),
               ),
             ],
           ),
@@ -284,7 +284,7 @@ class _CreditCardFormState extends State<CreditCardForm> {
             children: [
               Padding(
                 padding: EdgeInsets.fromLTRB(4, 16, 0, 4),
-                child: Text('Name on card'),
+                child: Text('Titular de la tarjeta'),
               ),
             ],
           ),
@@ -301,64 +301,6 @@ class _CreditCardFormState extends State<CreditCardForm> {
                 }
               },
               decoration: const InputDecoration(
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 5, horizontal: 16),
-                border: InputBorder.none,
-              ),
-            ),
-          ),
-          const Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(4, 16, 0, 4),
-                child: Text('Country or region'),
-              ),
-            ],
-          ),
-          TextFormFieldWrapper(
-            position: TextFormFieldPosition.top,
-            formField: DropdownButtonFormField(
-              value: chosenCountryIndex,
-              items: widget.countries
-                  .map((e) => DropdownMenuItem(
-                        child: Text(e),
-                        value: widget.countries.indexOf(e),
-                      ))
-                  .toList(),
-              // controller: cCountry,
-              decoration: const InputDecoration(
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 5, horizontal: 16),
-                border: InputBorder.none,
-              ),
-              onChanged: (widget.countries.length > 1)
-                  ? (o) => {
-                        setState(() {
-                          chosenCountryIndex = o;
-                        })
-                      }
-                  : null,
-            ),
-          ),
-          TextFormFieldWrapper(
-            position: TextFormFieldPosition.bottom,
-            formField: TextFormField(
-              controller: cZip,
-              keyboardType: TextInputType.number,
-              validator: (input) {
-                if (AddressPostalSubmitRegexValidator().isValid(input!)) {
-                  return null;
-                }
-                return 'Enter a valid zip code';
-              },
-              inputFormatters: [
-                MaskedTextInputFormatter(
-                  mask: 'xxxxx',
-                  separator: '',
-                )
-              ],
-              decoration: const InputDecoration(
-                hintText: 'ZIP',
                 contentPadding:
                     EdgeInsets.symmetric(vertical: 5, horizontal: 16),
                 border: InputBorder.none,
