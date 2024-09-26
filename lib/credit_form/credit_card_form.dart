@@ -151,7 +151,7 @@ class _CreditCardFormState extends State<CreditCardForm> {
                 validator: (value) {
                   if (value!.isNotEmpty &&
                       EmailSubmitRegexValidator().isValid(value)) return null;
-                  return "Invalid";
+                  return "Invalido";
                 },
                 decoration: const InputDecoration(
                     contentPadding:
@@ -183,7 +183,7 @@ class _CreditCardFormState extends State<CreditCardForm> {
                 if (CreditNumberSubmitRegexValidator().isValid(value!)) {
                   return null;
                 }
-                return 'Enter a valid card number';
+                return 'Ingresa un número de tarjeta válido';
               },
               inputFormatters: [
                 MaskedTextInputFormatter(
@@ -225,7 +225,7 @@ class _CreditCardFormState extends State<CreditCardForm> {
                       if (CreditExpirySubmitRegexValidator().isValid(value!)) {
                         return null;
                       }
-                      return "Invalid";
+                      return "Invalido";
                     },
                     inputFormatters: [
                       MaskedTextInputFormatter(
@@ -251,7 +251,7 @@ class _CreditCardFormState extends State<CreditCardForm> {
                       if (CreditCvvSubmitRegexValidator().isValid(value!)) {
                         return null;
                       }
-                      return "Invalid";
+                      return "Invalido";
                     },
                     keyboardType: TextInputType.number,
                     inputFormatters: [
@@ -297,7 +297,7 @@ class _CreditCardFormState extends State<CreditCardForm> {
                     CreditNameSubmitRegexValidator().isValid(input)) {
                   return null;
                 } else {
-                  return 'Enter a valid name';
+                  return 'Ingresa un nombre válido';
                 }
               },
               decoration: const InputDecoration(
