@@ -310,40 +310,6 @@ class _CreditCardFormState extends State<CreditCardForm> {
           const SizedBox(
             height: 30,
           ),
-          if (widget.displayPhone)
-            const Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(4, 16, 0, 4),
-                  child: Text('Phone Number'),
-                ),
-              ],
-            ),
-          if (widget.displayPhone)
-            TextFormFieldWrapper(
-              position: TextFormFieldPosition.alone,
-              formField: TextFormField(
-                controller: cPhone,
-                keyboardType: TextInputType.number,
-                validator: (input) {
-                  input = input!.replaceAll('-', '');
-                  if (PhoneRegexValidator().isValid(input)) return null;
-                  return 'Enter a valid phone number';
-                },
-                inputFormatters: [
-                  MaskedTextInputFormatter(
-                    mask: 'xxx-xxx-xxxx',
-                    separator: '-',
-                  )
-                ],
-                decoration: const InputDecoration(
-                  // hintText: 'Phone',
-                  contentPadding:
-                      EdgeInsets.symmetric(vertical: 5, horizontal: 16),
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
           const SizedBox(
             height: 30,
           ),

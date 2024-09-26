@@ -169,7 +169,6 @@ class MyDemoPage extends StatelessWidget {
               _creditPayClicked(paymentInfo, checkoutResults),
           onBack: _onBack,
           payBtnKey: _payBtnKey,
-          displayTestData: true,
           taxRate: 0.07,
         ),
         footer: _footer,
